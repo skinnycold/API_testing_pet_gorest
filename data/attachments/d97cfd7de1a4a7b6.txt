@@ -1,0 +1,25 @@
+INFO     api.api_client:api_client.py:25 Осуществляем POST - запрос к https://gorest.co.in/public/v2/users, данные: {'name': 'Kimberly Potter', 'gender': 'female', 'email': 'tony40@example.org', 'status': 'active'}
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 201,
+             Фактический статус: 201
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому
+INFO     api.api_client:api_client.py:61 Проверяем структуру JSON - Ожидаемая модель: {'properties': {'id': {'title': 'Id', 'type': 'integer'}, 'name': {'title': 'Name', 'type': 'string'}, 'email': {'pattern': '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{1,}$', 'title': 'Email', 'type': 'string'}, 'gender': {'enum': ['male', 'female'], 'title': 'Gender', 'type': 'string'}, 'status': {'enum': ['active', 'inactive'], 'title': 'Status', 'type': 'string'}}, 'required': ['id', 'name', 'gender', 'status'], 'title': 'UserValidate', 'type': 'object'}, Фактический JSON: {'id': 7777883, 'name': 'Kimberly Potter', 'email': 'tony40@example.org', 'gender': 'female', 'status': 'active'}
+INFO     api.api_client:api_client.py:68 JSON соответствует ожидаемой схеме
+INFO     api.api_client:api_client.py:25 Осуществляем POST - запрос к https://gorest.co.in/public/v2/posts, данные: {'user_id': 7777883, 'title': 'Skill soldier try huge old.', 'body': 'Model per feel commercial close ten. Property reason tell deal newspaper.'}
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 201,
+             Фактический статус: 201
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому
+INFO     api.api_client:api_client.py:61 Проверяем структуру JSON - Ожидаемая модель: {'properties': {'id': {'title': 'Id', 'type': 'integer'}, 'user_id': {'title': 'User Id', 'type': 'integer'}, 'title': {'title': 'Title', 'type': 'string'}, 'body': {'title': 'Body', 'type': 'string'}}, 'required': ['id', 'user_id', 'title', 'body'], 'title': 'PostValidate', 'type': 'object'}, Фактический JSON: {'id': 200232, 'user_id': 7777883, 'title': 'Skill soldier try huge old.', 'body': 'Model per feel commercial close ten. Property reason tell deal newspaper.'}
+INFO     api.api_client:api_client.py:68 JSON соответствует ожидаемой схеме
+INFO     api.api_client:api_client.py:76 Сверяем данные из ответа с ожидаемыми
+INFO     api.api_client:api_client.py:79 Данные совпадают
+INFO     api.api_client:api_client.py:25 Осуществляем GET - запрос к https://gorest.co.in/public/v2/posts/200232, данные: None
+INFO     api.api_client:api_client.py:76 Сверяем данные из ответа с ожидаемыми
+INFO     api.api_client:api_client.py:79 Данные совпадают
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 200,
+             Фактический статус: 200
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому
+INFO     api.api_client:api_client.py:25 Осуществляем DELETE - запрос к https://gorest.co.in/public/v2/users/7777883, данные: None
+INFO     api.api_client:api_client.py:85 
+            Закрываем сессию
+
+            ---------------------------------------------------

@@ -1,0 +1,15 @@
+INFO     api.api_client:api_client.py:25 Осуществляем POST - запрос к https://gorest.co.in/public/v2/users, данные: {'name': 'Dana Navarro', 'gender': 'male', 'email': 'timothychavez@example.net', 'status': 'active'}
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 201,
+             Фактический статус: 201
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому
+INFO     api.api_client:api_client.py:61 Проверяем структуру JSON - Ожидаемая модель: {'properties': {'id': {'title': 'Id', 'type': 'integer'}, 'name': {'title': 'Name', 'type': 'string'}, 'email': {'pattern': '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{1,}$', 'title': 'Email', 'type': 'string'}, 'gender': {'enum': ['male', 'female'], 'title': 'Gender', 'type': 'string'}, 'status': {'enum': ['active', 'inactive'], 'title': 'Status', 'type': 'string'}}, 'required': ['id', 'name', 'gender', 'status'], 'title': 'UserValidate', 'type': 'object'}, Фактический JSON: {'id': 7777887, 'name': 'Dana Navarro', 'email': 'timothychavez@example.net', 'gender': 'male', 'status': 'active'}
+INFO     api.api_client:api_client.py:68 JSON соответствует ожидаемой схеме
+INFO     api.api_client:api_client.py:25 Осуществляем POST - запрос к https://gorest.co.in/public/v2/posts, данные: {'user_id': '7774659', 'title': 'Maybe various.', 'body': ''}
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 422,
+             Фактический статус: 422
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому
+INFO     api.api_client:api_client.py:25 Осуществляем DELETE - запрос к https://gorest.co.in/public/v2/users/7777887, данные: None
+INFO     api.api_client:api_client.py:85 
+            Закрываем сессию
+
+            ---------------------------------------------------

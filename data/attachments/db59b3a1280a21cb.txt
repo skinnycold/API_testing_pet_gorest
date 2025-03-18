@@ -1,0 +1,4 @@
+INFO     api.api_client:api_client.py:25 Осуществляем GET - запрос к https://gorest.co.in/public/v2/posts/587376808, данные: None
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 404,
+             Фактический статус: 404
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому

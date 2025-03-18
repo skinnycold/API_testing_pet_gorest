@@ -1,0 +1,23 @@
+INFO     api.api_client:api_client.py:25 Осуществляем POST - запрос к https://gorest.co.in/public/v2/users, данные: {'name': 'Adam Mckinney', 'gender': 'male', 'email': 'rodriguezjames@example.com', 'status': 'active'}
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 201,
+             Фактический статус: 201
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому
+INFO     api.api_client:api_client.py:61 Проверяем структуру JSON - Ожидаемая модель: {'properties': {'id': {'title': 'Id', 'type': 'integer'}, 'name': {'title': 'Name', 'type': 'string'}, 'email': {'pattern': '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{1,}$', 'title': 'Email', 'type': 'string'}, 'gender': {'enum': ['male', 'female'], 'title': 'Gender', 'type': 'string'}, 'status': {'enum': ['active', 'inactive'], 'title': 'Status', 'type': 'string'}}, 'required': ['id', 'name', 'gender', 'status'], 'title': 'UserValidate', 'type': 'object'}, Фактический JSON: {'id': 7777899, 'name': 'Adam Mckinney', 'email': 'rodriguezjames@example.com', 'gender': 'male', 'status': 'active'}
+INFO     api.api_client:api_client.py:68 JSON соответствует ожидаемой схеме
+INFO     api.api_client:api_client.py:25 Осуществляем POST - запрос к https://gorest.co.in/public/v2/users/7777899/todos, данные: {'title': 'Several.', 'status': 'completed'}
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 201,
+             Фактический статус: 201
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому
+INFO     api.api_client:api_client.py:61 Проверяем структуру JSON - Ожидаемая модель: {'properties': {'id': {'title': 'Id', 'type': 'integer'}, 'user_id': {'title': 'User Id', 'type': 'integer'}, 'title': {'title': 'Title', 'type': 'string'}, 'due_on': {'anyOf': [{'type': 'string'}, {'type': 'null'}], 'title': 'Due On'}, 'status': {'enum': ['pending', 'completed'], 'title': 'Status', 'type': 'string'}}, 'required': ['id', 'user_id', 'title', 'due_on', 'status'], 'title': 'UserToDoValidate', 'type': 'object'}, Фактический JSON: {'id': 77336, 'user_id': 7777899, 'title': 'Several.', 'due_on': None, 'status': 'completed'}
+INFO     api.api_client:api_client.py:68 JSON соответствует ожидаемой схеме
+INFO     api.api_client:api_client.py:25 Осуществляем GET - запрос к https://gorest.co.in/public/v2/users/7777899/todos, данные: None
+INFO     api.api_client:api_client.py:46 Проверяем статус ответа - Ожидаемый статус: 200,
+             Фактический статус: 200
+INFO     api.api_client:api_client.py:57 Статус соответствует ожидаемому
+INFO     api.api_client:api_client.py:61 Проверяем структуру JSON - Ожидаемая модель: {'$defs': {'UserToDoValidate': {'properties': {'id': {'title': 'Id', 'type': 'integer'}, 'user_id': {'title': 'User Id', 'type': 'integer'}, 'title': {'title': 'Title', 'type': 'string'}, 'due_on': {'anyOf': [{'type': 'string'}, {'type': 'null'}], 'title': 'Due On'}, 'status': {'enum': ['pending', 'completed'], 'title': 'Status', 'type': 'string'}}, 'required': ['id', 'user_id', 'title', 'due_on', 'status'], 'title': 'UserToDoValidate', 'type': 'object'}}, 'items': {'$ref': '#/$defs/UserToDoValidate'}, 'title': 'AllToDoValidate', 'type': 'array'}, Фактический JSON: [{'id': 77336, 'user_id': 7777899, 'title': 'Several.', 'due_on': None, 'status': 'completed'}]
+INFO     api.api_client:api_client.py:68 JSON соответствует ожидаемой схеме
+INFO     api.api_client:api_client.py:25 Осуществляем DELETE - запрос к https://gorest.co.in/public/v2/users/7777899, данные: None
+INFO     api.api_client:api_client.py:85 
+            Закрываем сессию
+
+            ---------------------------------------------------
